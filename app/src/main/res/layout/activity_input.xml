@@ -15,28 +15,62 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/firstname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/lbl_edit_firstname"
+            style="@style/EditTable"
             android:hint="First Name"
             android:inputType="text|textPersonName"
-            android:padding="16dp"
-            android:textSize="20sp" />
+            />
     </android.support.design.widget.TextInputLayout>
 
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/lastname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/lbl_edit_lastname"
+            style="@style/EditTable"
             android:hint="Last Name"
-            android:inputType="text|textPersonName"
-            android:padding="16dp"
-            android:textSize="20sp" />
+            android:inputType="text|textPersonName" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/lbl_edit_sex"
+        style="@style/Spinners"
+        android:entries="@array/sex"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/lbl_edit_dob"
+            style="@style/EditTable"
+            android:hint="Dob"
+            android:inputType="date" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/lbl_edit_height"
+            style="@style/EditTable"
+            android:hint="Height"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/lbl_edit_weight"
+            style="@style/EditTable"
+            android:hint="Weight"
+            android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
 
     <Button

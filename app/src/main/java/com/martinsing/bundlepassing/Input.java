@@ -1,19 +1,21 @@
 package com.martinsing.bundlepassing;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import static com.martinsing.bundlepassing.R.id.firstname;
-import static com.martinsing.bundlepassing.R.id.lastname;
+import android.widget.Spinner;
 
 public class Input extends AppCompatActivity implements View.OnClickListener {
 
     EditText first_name;
     EditText last_name;
+    Spinner sex;
+    EditText dob;
+    EditText height;
+    EditText weight;
 
     Button save;
 
@@ -22,8 +24,12 @@ public class Input extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
-        first_name = (EditText) findViewById(R.id.firstname);
-        last_name = (EditText) findViewById(R.id.lastname);
+        first_name = (EditText) findViewById(R.id.lbl_edit_firstname);
+        last_name = (EditText) findViewById(R.id.lbl_edit_lastname);
+        sex = (Spinner) findViewById(R.id.lbl_edit_sex);
+        dob = (EditText) findViewById(R.id.lbl_edit_dob);
+        height = (EditText) findViewById(R.id.lbl_edit_height);
+        weight = (EditText) findViewById(R.id.lbl_edit_weight);
         save = (Button) findViewById(R.id.save);
         save.setOnClickListener(this);
 
@@ -34,8 +40,12 @@ public class Input extends AppCompatActivity implements View.OnClickListener {
 
         Intent intent = new Intent(this, MainActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putString("fName", first_name.getText().toString());
-        bundle.putString("lName", last_name.getText().toString());
+        bundle.putString("ufirst_name", first_name.getText().toString());
+        bundle.putString("ulast_name", last_name.getText().toString());
+        bundle.putString("usex", sex.getSelectedItem().toString());
+        bundle.putString("udob", dob.getText().toString());
+        bundle.putString("uheight", height.getText().toString());
+        bundle.putString("uweight", weight.getText().toString());
         intent.putExtras(bundle);
         startActivity(intent);
     }

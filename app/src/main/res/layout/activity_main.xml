@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,30 +7,86 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fitsSystemWindows="true"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/lbl_item_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Name:"
-        android:textSize="20sp" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/lbl_text_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Name"
-        android:textSize="20sp" />
+        <TextView
+            android:id="@+id/lbl_item_name"
+            style="@style/List"
+            android:text="Name:" />
 
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="gotoInput"
-        android:text="Edit" />
+        <TextView
+            android:id="@+id/lbl_user_name"
+            style="@style/List"
+            android:paddingLeft="8dp"/>
+    </TableRow>
 
-</LinearLayout>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbl_item_sex"
+            style="@style/List"
+            android:text="Sex:" />
+
+        <TextView
+            android:id="@+id/lbl_user_sex"
+            style="@style/List"
+            android:paddingLeft="8dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbl_item_dob"
+            style="@style/List"
+            android:text="DOB:" />
+
+        <TextView
+            android:id="@+id/lbl_user_dob"
+            style="@style/List"
+            android:paddingLeft="8dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbl_item_height"
+            style="@style/List"
+            android:text="Height:" />
+
+        <TextView
+            android:id="@+id/lbl_user_height"
+            style="@style/List"
+            android:paddingLeft="8dp"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbl_item_weight"
+            style="@style/List"
+            android:text="Weight:" />
+
+        <TextView
+            android:id="@+id/lbl_user_weight"
+            style="@style/List"
+            android:paddingLeft="8dp"/>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:text="Save"
+            android:onClick="gotoInput"/>
+    </TableRow>
+</TableLayout>
