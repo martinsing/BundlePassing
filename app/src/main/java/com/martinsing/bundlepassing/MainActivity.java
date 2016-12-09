@@ -3,8 +3,11 @@ package com.martinsing.bundlepassing;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+
+import static com.martinsing.bundlepassing.R.mipmap.ic_launcher;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,7 +54,13 @@ public class MainActivity extends AppCompatActivity {
             user_weight.setText("");
 
         }
+//For the Toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+//Sets launcher icon as home
+        toolbar.setNavigationIcon(ic_launcher);
     }
+
 
     //Launch the Input Activity
     public void gotoInput(View view) {

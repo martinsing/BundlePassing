@@ -124,10 +124,11 @@
         <item name="android:layout_weight">1</item>
     </style>
     <style name="Spinners">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:padding">16dp</item>
     </style>
 
 
