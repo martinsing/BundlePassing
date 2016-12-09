@@ -26,7 +26,8 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_margin="16dp">
 
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -109,12 +110,25 @@
                     android:paddingLeft="8dp" />
             </TableRow>
 
-            <TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <Button
+                    style="@style/List"
                     android:onClick="gotoInput"
                     android:text="edit" />
+
+                <View />
             </TableRow>
+
+            <TextView
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Please note that Bundles should not be used for Persistant Data as demonstrated. If you want the data to be persistant then either use Shared Preferences, SQLite Database, and either Internal or External Storage." />
+
         </TableLayout>
 
     </android.support.v4.widget.NestedScrollView>
